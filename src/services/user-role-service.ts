@@ -1,32 +1,32 @@
-import User from "../models/user";
+import UserRole from "../models/userRole";
  
-export default class UserService {
+export default class UserRoleService {
 
-  static getUsers(): Promise<User[]> {
-    return fetch('http://localhost:3001/users')
+  static getUserRoles(): Promise<UserRole[]> {
+    return fetch('http://localhost:3001/userRoles')
       .then(response => response.json())
       .catch(error => this.handleError(error));
   }
  
-  static getUser(id: number): Promise<User|null> {
-    return fetch(`http://localhost:3001/users/${id}`)
+  static getUserRole(id: number): Promise<UserRole|null> {
+    return fetch(`http://localhost:3001/userRoles/${id}`)
       .then(response => response.json())
       .then(data => this.isEmpty(data) ? null : data)
       .catch(error => this.handleError(error));
   }
 
-  static updateUser(user: User): Promise<User> {
-    return fetch(`http://localhost:3001/users/${user.id}`, {
+  static updateUserRole(userRole: UserRole): Promise<UserRole> {
+    return fetch(`http://localhost:3001/userRoles/${userRole.id}`, {
       method: 'PUT',
-      body: JSON.stringify(user),
+      body: JSON.stringify(userRole),
       headers: { 'Content-Type': 'application/json'}
     })
     .then(response => response.json())
     .catch(error => this.handleError(error));
   }
 
-  static deleteUser(user: User): Promise<{}> {
-    return fetch(`http://localhost:3001/users/${user.id}`, {
+  static deleteUserRole(userRole: UserRole): Promise<{}> {
+    return fetch(`http://localhost:3001/userRoles/${userRole.id}`, {
       method: 'DELETE',
       headers: { 'Content-Type': 'application/json'}
     })

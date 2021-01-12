@@ -1,0 +1,46 @@
+{
+    "users": [
+      {
+        "id": 1,
+        "username": "Diao Diallo",
+        "password": "password1"
+      },
+      {
+        "id": 2,
+        "username": "Amadou Bah",
+        "password": "password2"
+      },
+      {
+        "id": 3,
+        "username": "Obama",
+        "password": "password3"
+      }
+    ],
+    "userRoles": [
+        {
+          "id": 1,
+          "userId": 1,
+          "roleId": "admin"
+        },
+        {
+          "id": 2,
+            "userId": 2,
+            "roleId": "view"
+          },
+          {
+            "id": 3,
+            "userId": 3,
+            "roleId": "view"
+          }
+      ],
+      "roles": [
+        {
+          "id": "admin",
+          "name": "Admin"
+        },
+        {
+            "id": "view",
+            "name": "View"
+          }
+      ]
+  }

@@ -1,5 +1,6 @@
 import React, { FunctionComponent, useState } from 'react';
 import User from '../models/user';
+import { useHistory } from 'react-router-dom';
 
 type Props = {
   user: User
@@ -23,6 +24,8 @@ const LoginForm: FunctionComponent<Props> = ({ user }) => {
     password: { value: '', isValid: true },
   });
 
+  const history = useHistory();
+
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
 
@@ -33,6 +36,7 @@ const LoginForm: FunctionComponent<Props> = ({ user }) => {
     //   pokemon.types = form.types.value;
     //   PokemonService.updatePokemon(pokemon).then(() => history.push(`/pokemons/${pokemon.id}`));
     // }
+    history.push(`/accueil`);
   }
 
   return (

@@ -2,7 +2,6 @@ import React, { FunctionComponent, useState } from 'react';
 import User from '../models/user';
 import { useHistory } from 'react-router-dom';
 import formatRole from '../helpers/format-roles';
-import Role from '../models/role';
 import ROLE from '../models/mock-role';
 
 type Field = {
