@@ -18,7 +18,19 @@ export const USERS: User[] = [
     username: "dhis2team@gmail.com",
     password: "password3",
     datenaissance: new Date(),
-   }
+   },
+   {
+      id: 4,
+      username: "dhis2team@gmail.com",
+      password: "password3",
+      datenaissance: new Date(),
+     },
+     {
+      id: 5,
+      username: "dhis2team@gmail.com",
+      password: "password3",
+      datenaissance: new Date(),
+     }
 ];
   
 export default USERS;

@@ -3,6 +3,8 @@ import User from '../models/user';
 import { useHistory } from 'react-router-dom';
 import formatRole from '../helpers/format-roles';
 import ROLE from '../models/mock-role';
+import UserService from '../services/user-service';
+import UserRoleService from '../services/user-role-service';
 
 type Field = {
   value?: any
@@ -56,8 +58,8 @@ const UserForm: FunctionComponent = () => {
       data.user.datenaissance = form.datenaissance.value;
       data.roles = form.roles.value;
       // Sen the user in the db
-    //   PokemonService.updatePokemon(pokemon).then(() => history.push(`/pokemons/${pokemon.id}`));
-    history.push(`/users`);
+      // UserService.updateUser(data.user).then(() => history.push(`/users`));
+      history.push(`/users`);
   }
 
   return (
