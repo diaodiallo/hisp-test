@@ -26,6 +26,10 @@ const LoginForm: FunctionComponent<Props> = ({ user }) => {
 
   const history = useHistory();
 
+  // const validateLogin() {
+
+  // };
+
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
 

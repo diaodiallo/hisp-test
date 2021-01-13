@@ -1,6 +1,8 @@
 import React, { FunctionComponent, useState, useEffect } from 'react';
 import User from '../models/user';
 import USERS from '../models/mock-user';
+import NavBar from '../components/nav-bar';
+import { Link } from 'react-router-dom';
   
 const UsersList: FunctionComponent = () => {
 
@@ -11,7 +13,8 @@ const UsersList: FunctionComponent = () => {
   }, []);
   
   return (
-    <div>
+    <div className="center">
+      <NavBar />
       <h1 className="center">Users list</h1>
       <div className="container"> 
         <div className="row"> 
@@ -27,6 +30,11 @@ const UsersList: FunctionComponent = () => {
           </div> 
         </div>
         ))}
+        </div>
+        <div className="row">
+        <Link to={`/user/add`} className="btn btn-floating center">
+                    <i className="material-icons">add</i>
+                </Link>
         </div>
       </div>
     </div> 
